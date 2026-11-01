@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/sonojs-crypto-01/favicon.svg" />
+    <link rel="alternate icon" href="/sonojs-crypto-01/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Helix — Crypto Paper Trading Desk</title>
+    <meta
+      name="description"
+      content="Helix by SonoJS — a production-grade crypto paper-trading terminal with live markets, depth, and portfolio analytics."
+    />
+    <meta name="author" content="Milad Joodi / SonoJS" />
+    <script type="module" crossorigin src="/sonojs-crypto-01/assets/index-D4_mYLou.js"></script>
+    <link rel="stylesheet" crossorigin href="/sonojs-crypto-01/assets/index-BRrwU_vA.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      try {
+        var raw = localStorage.getItem("helix-settings");
+        var theme = raw ? JSON.parse(raw)?.state?.theme : null;
+        if (theme === "light" || theme === "dark") {
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+        } else {
+          document.documentElement.dataset.theme = "dark";
+        }
+      } catch (e) {
+        document.documentElement.dataset.theme = "dark";
+      }
+    </script>
+  </body>
+</html>
